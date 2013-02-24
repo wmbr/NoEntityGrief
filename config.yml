@@ -1,13 +1,13 @@
-# Worlds that are NOT protected
+# Worlds that ARE protected
 Endermen:
-- unprotectedworld
+- protectedworld
 Sheep:
-- unprotectedworld
+- protectedworld
 MobExplosion:
-- unprotectedworld
+- protectedworld
 TNT:
-- unprotectedworld
+- protectedworld
 Snowman:
-- unprotectedworld
+- protectedworld
 Silverfish:
-- unprotectedworld
+- protectedworld

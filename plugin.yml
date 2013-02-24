@@ -1,4 +1,4 @@
 name: NoEntityGrief
 main: com.fishrock123.noentitygrief.NoEntityGrief
-version: 3.0.1 (1D6)
-dev-url: http://dev.bukkit.org/server-mods/noentitygrief/
+version: 3.0.1 (1D6) inverse
+dev-url: https://github.com/wmbr/NoEntityGrief
