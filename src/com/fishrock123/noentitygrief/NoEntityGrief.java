@@ -30,7 +30,7 @@ public class NoEntityGrief extends JavaPlugin implements Listener { // Licensed
 		getServer().getPluginManager().registerEvents(this, this);
 	}
 
-	@EventHandler
+	@EventHandler(ignoreCancelled=true, priority=EventPriority.LOW)
 	public void onBlockChange(EntityChangeBlockEvent e) {
 		if (e.getEntity() instanceof Enderman
 				&& EWs[0] != null && EWs[0].contains(e.getBlock().getLocation().getWorld().getName()))
@@ -45,7 +45,7 @@ public class NoEntityGrief extends JavaPlugin implements Listener { // Licensed
 		}
 	}
 
-	@EventHandler
+	@EventHandler(ignoreCancelled=true, priority=EventPriority.LOW)
 	public void onExplosion(EntityExplodeEvent e) {
 		if (e.getEntity() instanceof TNTPrimed) {
 			if (EWs[3] != null && EWs[3].contains(e.getLocation().getWorld().getName()))
@@ -54,7 +54,7 @@ public class NoEntityGrief extends JavaPlugin implements Listener { // Licensed
 			e.blockList().clear();
 	}
 
-	@EventHandler
+	@EventHandler(ignoreCancelled=true, priority=EventPriority.LOW)
 	public void onPaintingBreak(HangingBreakEvent e) {
 		if (e.getCause() == HangingBreakEvent.RemoveCause.EXPLOSION
 				&& e.getEntity() instanceof TNTPrimed) {
@@ -65,7 +65,7 @@ public class NoEntityGrief extends JavaPlugin implements Listener { // Licensed
 			e.setCancelled(true);
 	}
 
-	@EventHandler
+	@EventHandler(ignoreCancelled=true, priority=EventPriority.LOW)
 	public void onEntityForm(EntityBlockFormEvent e) {
 		if (EWs[4] != null && EWs[4].contains(e.getBlock().getLocation().getWorld().getName()))
 			e.setCancelled(true);
